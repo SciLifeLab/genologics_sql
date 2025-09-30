@@ -214,8 +214,8 @@ def get_children_processes(session, parent_process, ptypes, sample=None, orderby
     qar1.append("where piot2.processid={parent} and pro.typeid in ({typelist}) ")
     qar2.append("where piot2.processid={parent} and pro.typeid in ({typelist}) ")
     if sample:
-        qar1.append("and asm.processid = {sampleid}".format(sampleid=sample))
-        qar2.append("and asm.processid = {sampleid}".format(sampleid=sample))
+        qar1.append("and asm.processid = {sampleid} ".format(sampleid=sample))
+        qar2.append("and asm.processid = {sampleid} ".format(sampleid=sample))
     if orderby:
         qar2.append("order by {}".format(orderby))
 
